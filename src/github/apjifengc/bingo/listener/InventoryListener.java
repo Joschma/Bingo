@@ -16,7 +16,7 @@ public final class InventoryListener implements Listener {
 	@EventHandler
 	public void onInventoryClick(InventoryClickEvent event) {
 		if (event.getClickedInventory() != null) {
-			if (event.getClickedInventory().getHolder() != null
+			if (event.getClickedInventory().getHolder() != null && event.getPlayer.getWorld.getName().equalsIngorecase("bingo")
 					&& event.getClickedInventory().getHolder() instanceof BingoGuiInventory) {
 				event.setCancelled(true);
 			}
