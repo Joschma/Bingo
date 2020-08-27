@@ -47,7 +47,7 @@ public class TaskListener implements Listener {
                     getItem(player, event.getInventory().getItem(event.getRawSlot()));
                 }
             } else if (event.getClickedInventory().getType() == InventoryType.PLAYER
-                    && (event.getSlot() == 8 || event.getHotbarButton() == 8)) {
+                    && (event.getSlot() == 8 || event.getHotbarButton() == 8) && event.getPlayer().getWorld.getName().equalsIngorecase(Configs.getMainCfg().getString("room.world-name")) {
                 event.setCancelled(true);
             }
         }
