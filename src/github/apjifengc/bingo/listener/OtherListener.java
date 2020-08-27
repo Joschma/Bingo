@@ -74,7 +74,7 @@ public class OtherListener implements Listener {
 				BingoPlayer player = game.getPlayer(event.getPlayer());
 				if (player != null && (event.getAction() == Action.RIGHT_CLICK_AIR
 						|| event.getAction() == Action.RIGHT_CLICK_BLOCK)) {
-					if (event.getPlayer().getInventory().getHeldItemSlot() == 8) {
+					if (event.getPlayer().getInventory().getHeldItemSlot() == 8 && player.getWorld.getName().equalsIngnoreCase(Configs.getMainCfg().getString("room.world-name"))) {
 						new GuiCommand().onGuiCommand(event.getPlayer(), plugin);
 					}
 				}
